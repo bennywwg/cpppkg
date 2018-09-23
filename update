@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [! -d "packages"]; then
+	mkdir packages
+fi
+
+cd packages
+
+cat $1 | sed 's/^/git clone /' | bash
